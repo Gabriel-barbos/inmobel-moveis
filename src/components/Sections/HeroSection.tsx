@@ -1,24 +1,28 @@
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Award, Users, Clock } from 'lucide-react'
-import heroImage from '@/assets/hero-kitchen.jpg'
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Award, Users, Clock, Calculator } from "lucide-react";
+import heroImage from "@/assets/hero-kitchen.jpg";
+import { PointerHighlight } from "../ui/pointer-highlight";
 
 const HeroSection = () => {
   const scrollToPortfolio = () => {
-    const element = document.querySelector('#portfolio')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const element = document.querySelector("#portfolio");
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const scrollToContact = () => {
-    const element = document.querySelector('#contact')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const element = document.querySelector("#contact");
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
+        <img
+          src={heroImage}
           alt="Cozinha planejada luxuosa da Inmobel"
           className="w-full h-full object-cover"
         />
@@ -33,42 +37,74 @@ const HeroSection = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/30 animate-fade-in">
               <Award className="w-4 h-4 mr-2" />
-              <span className="text-sm font-medium">Referência em Móveis Planejados de Alto Padrão</span>
+              <span className="text-sm font-medium">
+                Referência em Móveis Planejados de Alto Padrão
+              </span>
             </div>
 
             {/* Main Heading */}
             <div className="animate-slide-up">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
                 <span className="block">Inmobel</span>
-                <span className="block text-accent">Móveis Planejados</span>
+                <span className="block text-accent">
+                  Móveis{" "}
+                  <PointerHighlight
+                    rectangleClassName="border-2 border-orange-500 rounded-md"
+                    pointerClassName="text-orange-500"
+                  >
+                    <span className="relative z-10">Planejados</span>
+                  </PointerHighlight>
+                </span>
               </h1>
             </div>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed max-w-2xl animate-fade-in">
-              Design sob medida com excelência em cada detalhe. 
-              Transformamos sonhos em realidade através de móveis únicos e funcionais.
+              Design sob medida com excelência em cada detalhe. Transformamos
+              sonhos em realidade através de móveis únicos e funcionais.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-scale-in">
-              <Button 
-                variant="hero" 
-                size="lg" 
+              <Button
+                variant="hero"
+                size="lg"
                 onClick={scrollToPortfolio}
                 className="group"
               >
                 Conheça nosso portfólio
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
+              <button
                 onClick={scrollToContact}
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="relative group overflow-hidden px-4 sm:px-6 h-12 rounded-xl font-semibold transition-all duration-300 
+                          bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm 
+                          border-2 border-white/30 text-white
+                          hover:from-white hover:to-white hover:text-primary hover:border-white
+                          hover:shadow-2xl hover:shadow-white/25 hover:-translate-y-1
+                          active:scale-[0.98] active:translate-y-0
+                          text-sm sm:text-base lg:text-lg whitespace-nowrap"
               >
-                Solicitar Orçamento
-              </Button>
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                
+                {/* Glowing particles */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute top-2 left-4 w-1 h-1 bg-white rounded-full animate-pulse delay-100" />
+                  <div className="absolute top-4 right-6 w-1 h-1 bg-white rounded-full animate-pulse delay-300" />
+                  <div className="absolute bottom-3 left-8 w-1 h-1 bg-white rounded-full animate-pulse delay-500" />
+                </div>
+                
+                {/* Content */}
+                <span className="relative z-10 flex items-center justify-center">
+                  <Calculator className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                  Solicitar Orçamento
+                  <div className="ml-2 w-2 h-2 bg-accent rounded-full group-hover:scale-125 transition-transform duration-300" />
+                </span>
+                
+                {/* Ripple effect on click */}
+                <div className="absolute inset-0 rounded-xl bg-white/10 scale-0 group-active:scale-100 transition-transform duration-200 ease-out" />
+              </button>
             </div>
 
             {/* Stats */}
@@ -77,22 +113,34 @@ const HeroSection = () => {
                 <div className="flex items-center w-12 h-12 bg-accent/20 rounded-full mb-3">
                   <Award className="w-6 h-6 text-accent mx-auto" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-foreground mb-1">15+</h3>
-                <p className="text-primary-foreground/80 text-sm">Anos de Experiência</p>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-1">
+                  15+
+                </h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  Anos de Experiência
+                </p>
               </div>
               <div>
                 <div className="flex items-center w-12 h-12 bg-accent/20 rounded-full mb-3">
                   <Users className="w-6 h-6 text-accent mx-auto" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-foreground mb-1">500+</h3>
-                <p className="text-primary-foreground/80 text-sm">Projetos Entregues</p>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-1">
+                  500+
+                </h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  Projetos Entregues
+                </p>
               </div>
               <div>
                 <div className="flex items-center w-12 h-12 bg-accent/20 rounded-full mb-3">
                   <Clock className="w-6 h-6 text-accent mx-auto" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-foreground mb-1">100%</h3>
-                <p className="text-primary-foreground/80 text-sm">Prazo Cumprido</p>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-1">
+                  100%
+                </h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  Prazo Cumprido
+                </p>
               </div>
             </div>
           </div>
@@ -109,7 +157,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

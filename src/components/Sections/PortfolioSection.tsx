@@ -5,9 +5,15 @@ import { ArrowRight, Expand } from 'lucide-react'
 import heroImage from '@/assets/hero-kitchen.jpg'
 import closetImage from '@/assets/portfolio-closet.jpg'
 import officeImage from '@/assets/portfolio-office.jpg'
-
+import { TypewriterEffectSmooth } from '../ui/typewritter-effect'
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all')
+
+const words = [
+  { text: "Conheça", className: "text-6xl md:text-7xl" },
+  { text: "nosso", className: "text-6xl md:text-7xl" },
+  { text: "Portfólio", className: "text-6xl md:text-7xl text-orange-500 dark:text-orange-500" },
+];
 
   const categories = [
     { id: 'all', name: 'Todos os Projetos' },
@@ -81,14 +87,18 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Nosso Portfólio
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Cada projeto é uma obra única, criada especialmente para nossos clientes
-            </p>
-          </div>
+  <div className="text-center mb-16 animate-fade-in">
+<h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+  <span className="inline-block text-5xl md:text-6xl font-bold text-primary">
+    <TypewriterEffectSmooth words={words} />
+  </span>
+</h2>
+
+
+  <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+    Cada projeto é uma obra única, criada especialmente para nossos clientes
+  </p>
+</div>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -135,7 +145,7 @@ const PortfolioSection = () => {
                     {project.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium"
+                        className="px-3 py-1 bg-blue-100 text-blue-500 text-sm rounded-full font-medium"
                       >
                         {tag}
                       </span>
