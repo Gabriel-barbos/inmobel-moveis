@@ -11,56 +11,56 @@
     /* Core Brand Colors */
     --background: 0 0% 100%;
     --foreground: 213 31% 12%;
-    
+
     /* Navy Blue - Primary Brand */
     --primary: 213 31% 12%;
     --primary-light: 213 25% 20%;
     --primary-foreground: 0 0% 100%;
-    
+
     /* Orange - Accent Color */
     --accent: 25 95% 53%;
     --accent-light: 25 95% 63%;
     --accent-foreground: 213 31% 12%;
-    
+
     /* Elegant Grays */
     --secondary: 210 17% 95%;
     --secondary-foreground: 213 31% 12%;
     --muted: 210 17% 98%;
     --muted-foreground: 213 8% 45%;
-    
+
     /* Surface Colors */
     --card: 0 0% 100%;
     --card-foreground: 213 31% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 213 31% 12%;
-    
+
     /* System Colors */
     --border: 210 17% 90%;
     --input: 210 17% 95%;
     --ring: 25 95% 53%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(213 31% 12%) 0%, hsl(213 25% 20%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(25 95% 63%) 100%);
     --gradient-elegant: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 17% 98%) 100%);
-    
+
     /* Premium Shadows */
     --shadow-soft: 0 2px 8px hsl(213 31% 12% / 0.06);
     --shadow-medium: 0 4px 24px hsl(213 31% 12% / 0.10);
     --shadow-strong: 0 8px 40px hsl(213 31% 12% / 0.15);
     --shadow-accent: 0 4px 20px hsl(25 95% 53% / 0.25);
-    
+
     /* Typography Scale */
     --font-heading: 'Montserrat', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
-    
+
     /* Spacing & Layout */
     --radius: 0.75rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
-    
+
     /* Animation Timings */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -119,6 +119,10 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  }
 }
 
 @layer base {
@@ -140,43 +144,43 @@
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
   }
-  
+
   .animate-scale-in {
     animation: scaleIn 0.6s ease-out forwards;
   }
-  
+
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
   }
-  
+
   .gradient-primary {
     background: var(--gradient-primary);
   }
-  
+
   .gradient-accent {
     background: var(--gradient-accent);
   }
-  
+
   .gradient-elegant {
     background: var(--gradient-elegant);
   }
-  
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
-  
+
   .shadow-medium {
     box-shadow: var(--shadow-medium);
   }
-  
+
   .shadow-strong {
     box-shadow: var(--shadow-strong);
   }
-  
+
   .shadow-accent {
     box-shadow: var(--shadow-accent);
   }
@@ -218,4 +222,50 @@
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 25s linear infinite;
 }

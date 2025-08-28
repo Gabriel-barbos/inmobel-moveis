@@ -6,6 +6,7 @@ import heroImage from '@/assets/hero-kitchen.jpg'
 import closetImage from '@/assets/portfolio-closet.jpg'
 import officeImage from '@/assets/portfolio-office.jpg'
 import { TypewriterEffectSmooth } from '../ui/typewritter-effect'
+
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all')
 
@@ -156,25 +157,98 @@ const words = [
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <Card className="p-8 gradient-primary text-primary-foreground shadow-strong inline-block">
-              <h3 className="text-2xl font-bold mb-4">Gostou do que viu?</h3>
-              <p className="text-primary-foreground/90 mb-6 max-w-md">
-                Entre em contato conosco e transforme sua ideia em um projeto único
-              </p>
-              <Button 
-                variant="hero" 
-                onClick={scrollToContact}
-                className="bg-accent text-accent-foreground hover:bg-accent-light group"
-              >
-                Solicitar Projeto Personalizado
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Card>
+          {/* CTA com Glass Effect Modernizado */}
+          <div className="text-center relative">
+            {/* Background decorativo com blur */}
+            <div className="absolute -inset-4 opacity-30 blur-xl bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-teal-500/20 animate-pulse"></div>
+            
+            {/* Card principal com glass effect */}
+            <div className="relative p-8 gradient-primary text-primary-foreground shadow-strong inline-block rounded-xl backdrop-blur-md border border-white/20 overflow-hidden group hover:scale-[1.02] transition-all duration-500 ease-out">
+              
+              {/* Glass overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
+              
+              {/* Floating elements decorativos */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-white/30 rounded-full animate-bounce delay-100"></div>
+              <div className="absolute top-8 left-6 w-1 h-1 bg-white/40 rounded-full animate-bounce delay-300"></div>
+              <div className="absolute bottom-6 right-8 w-1.5 h-1.5 bg-white/25 rounded-full animate-bounce delay-500"></div>
+              
+              {/* Shine effect que passa pelo card */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"></div>
+              
+              {/* Conteúdo */}
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4 transform group-hover:-translate-y-1 transition-transform duration-300">
+                  Gostou do que viu?
+                  <div className="w-16 h-0.5 bg-white/40 mx-auto mt-2 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </h3>
+                
+                <p className="text-primary-foreground/90 mb-6 max-w-md transform group-hover:translate-y-1 transition-transform duration-300 delay-75">
+                  Entre em contato conosco e transforme sua ideia em um projeto único
+                </p>
+                
+                <button 
+                  onClick={scrollToContact}
+                  className="bg-accent text-accent-foreground hover:bg-accent-light group/btn relative overflow-hidden px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                >
+                  {/* Button background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500"></div>
+                  
+                  <span className="relative z-10 flex items-center justify-center">
+                    Solicitar Projeto Personalizado
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-2 group-hover/btn:scale-110 transition-all duration-300" />
+                  </span>
+                  
+                  {/* Ripple effect */}
+                  <div className="absolute inset-0 rounded-lg opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg animate-ping bg-white/20"></div>
+                  </div>
+                </button>
+              </div>
+              
+              {/* Border glow effect */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-purple-400/20 via-blue-400/20 to-teal-400/20 blur-sm -z-10"></div>
+            </div>
+            
+            {/* Floating particles */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/20 rounded-full animate-float"></div>
+              <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-white/30 rounded-full animate-float-delayed"></div>
+              <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-white/15 rounded-full animate-float-slow"></div>
+            </div>
           </div>
+
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(-180deg); }
+        }
+        
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(90deg); }
+        }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delayed {
+          animation: float-delayed 8s ease-in-out infinite 2s;
+        }
+        
+        .animate-float-slow {
+          animation: float-slow 10s ease-in-out infinite 1s;
+        }
+      `}</style>
     </section>
   )
 }

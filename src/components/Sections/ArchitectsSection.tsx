@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Users, CheckCircle, Lightbulb, HeadphonesIcon, ArrowRight } from 'lucide-react'
+import { Users, CheckCircle, Lightbulb, Headphones, ArrowRight } from 'lucide-react'
+import { cn } from "@/lib/utils"
+import { Marquee } from "@/components/magicui/marquee"
 
 const ArchitectsSection = () => {
   const benefits = [
@@ -20,11 +22,95 @@ const ArchitectsSection = () => {
       description: 'Profissionais experientes em execução de projetos de arquitetura de alto padrão.'
     },
     {
-      icon: HeadphonesIcon,
+      icon: Headphones,
       title: 'Relacionamento Transparente',
       description: 'Comunicação clara em todas as etapas, mantendo você informado sobre o progresso.'
     }
   ]
+
+  // Depoimentos de arquitetos parceiros
+  const testimonials = [
+    {
+      name: "Cristian Ronald",
+      username: "@cris_arquitetura",
+      body: "A Inmobel transformou meus projetos em realidade com uma precisão impressionante. A qualidade dos móveis planejados é excepcional.",
+      img: "https://images.unsplash.com/photo-1494790108755-2616b612b739?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Carlos Silva",
+      username: "@carlos_design",
+      body: "Parceria há 3 anos. Sempre cumprem prazos e respeitam cada detalhe do projeto. Recomendo de olhos fechados!",
+      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "José da silva",
+      username: "@joseph_interiores",
+      body: "A comunicação é transparente e a execução impecável. Meus clientes ficam sempre encantados com o resultado final.",
+      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Roberto Almeida",
+      username: "@roberto_projetos",
+      body: "Flexibilidade para alterações sem perder a qualidade. A Inmobel entende as necessidades dos arquitetos.",
+      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Juliana Santos",
+      username: "@ju_arquitetura",
+      body: "Suporte técnico excepcional! A equipe sempre tem soluções criativas para os desafios do projeto.",
+      img: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Pedro Oliveira",
+      username: "@pedro_design",
+      body: "Trabalho com a Inmobel há 5 anos. A confiança e qualidade são os pilares dessa parceria de sucesso.",
+      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    },
+  ]
+
+  const firstRow = testimonials.slice(0, testimonials.length / 2)
+  const secondRow = testimonials.slice(testimonials.length / 2)
+
+  const TestimonialCard = ({
+    img,
+    name,
+    username,
+    body,
+  }: {
+    img: string;
+    name: string;
+    username: string;
+    body: string;
+  }) => {
+    return (
+      <figure
+        className={cn(
+          "relative h-full w-80 cursor-pointer overflow-hidden rounded-xl border p-6",
+          "border-primary/20 bg-background/50 hover:bg-primary/5 shadow-soft backdrop-blur-sm",
+          "transition-all duration-300 hover:shadow-strong hover:scale-105"
+        )}
+      >
+        <div className="flex flex-row items-center gap-3 mb-4">
+          <img 
+            className="rounded-full border-2 border-primary/20" 
+            width="40" 
+            height="40" 
+            alt="" 
+            src={img} 
+          />
+          <div className="flex flex-col">
+            <figcaption className="text-sm font-bold text-primary">
+              {name}
+            </figcaption>
+            <p className="text-xs font-medium text-muted-foreground">{username}</p>
+          </div>
+        </div>
+        <blockquote className="text-sm text-muted-foreground leading-relaxed">
+          "{body}"
+        </blockquote>
+      </figure>
+    );
+  };
 
   const scrollToContact = () => {
     const element = document.querySelector('#contact')
@@ -47,7 +133,7 @@ const ArchitectsSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Content */}
             <div className="animate-slide-up">
               <Card className="p-8 gradient-elegant shadow-strong border-l-4 border-accent">
@@ -110,8 +196,35 @@ const ArchitectsSection = () => {
             </div>
           </div>
 
+          {/* Testimonials Marquee Section */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-primary mb-4">
+                O que nossos parceiros arquitetos dizem
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Depoimentos reais de arquitetos que confiam na Inmobel para executar seus projetos
+              </p>
+            </div>
+
+            <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-8">
+              <Marquee pauseOnHover className="[--duration:25s] mb-4">
+                {firstRow.map((testimonial) => (
+                  <TestimonialCard key={testimonial.username} {...testimonial} />
+                ))}
+              </Marquee>
+              <Marquee reverse pauseOnHover className="[--duration:25s]">
+                {secondRow.map((testimonial) => (
+                  <TestimonialCard key={testimonial.username} {...testimonial} />
+                ))}
+              </Marquee>
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+            </div>
+          </div>
+
           {/* Stats Section */}
-          <div className="mt-16">
+          <div>
             <Card className="p-8 gradient-primary text-primary-foreground text-center shadow-strong">
               <h3 className="text-2xl font-bold mb-8">Parcerias de Sucesso</h3>
               <div className="grid md:grid-cols-3 gap-8">

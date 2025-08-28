@@ -184,7 +184,7 @@ const ContactSection = () => {
                 </Card>
               ))}
 
-              {/* Expansion Info */}
+              {/* Expansion Info
               <Card className="p-6 gradient-elegant border-l-4 border-accent">
                 <h3 className="text-lg font-bold text-primary mb-3">Expansão para São Paulo</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -192,7 +192,7 @@ const ContactSection = () => {
                   em São Paulo para atender um mercado ainda mais exigente, mantendo o mesmo 
                   padrão de qualidade e compromisso que nos tornou referência.
                 </p>
-              </Card>
+              </Card> */}
 
               {/* WhatsApp CTA */}
               <Card className="p-6 gradient-accent text-accent-foreground text-center shadow-accent">

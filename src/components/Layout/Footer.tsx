@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact São Paulo */}
+          {/* Contact São Paulo
           <div>
             <h4 className="text-lg font-semibold mb-4">São Paulo - Filial</h4>
             <div className="space-y-3">
@@ -62,13 +62,13 @@ const Footer = () => {
                 <span className="text-primary-foreground/80 text-sm">(11) 99999-9999</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-            © {currentYear} Inmobel Móveis Planejados. Todos os direitos reservados.
+            © {currentYear} Desenvolvido por Gabriel Barbosa. Todos os direitos reservados.
           </p>
           <div className="flex items-center">
             <Mail className="w-4 h-4 mr-2 text-accent" />
