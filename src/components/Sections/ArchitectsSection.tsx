@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Users, CheckCircle, Lightbulb, Headphones, ArrowRight } from 'lucide-react'
+import { Users, CheckCircle, Lightbulb, Headphones, ArrowRight, MessageCircle } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { Marquee } from "@/components/magicui/marquee"
 
@@ -112,9 +112,8 @@ const ArchitectsSection = () => {
     );
   };
 
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact')
-    element?.scrollIntoView({ behavior: 'smooth' })
+  const openWhatsApp = () => {
+    window.open('https://wa.me/11994407006', '_blank')
   }
 
   return (
@@ -167,7 +166,8 @@ const ArchitectsSection = () => {
                   </div>
                 </div>
 
-                <Button variant="accent" onClick={scrollToContact} className="group">
+                <Button variant="accent" onClick={openWhatsApp} className="group">
+                  <MessageCircle className="mr-2 h-6 w-6" />
                   Vamos conversar sobre uma parceria
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -197,7 +197,7 @@ const ArchitectsSection = () => {
           </div>
 
           {/* Testimonials Marquee Section */}
-          <div className="mb-16">
+           <div className="mb-16">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-primary mb-4">
                 O que nossos parceiros arquitetos dizem
@@ -221,7 +221,7 @@ const ArchitectsSection = () => {
               <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
               <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
             </div>
-          </div>
+          </div> 
 
           {/* Stats Section */}
           <div>

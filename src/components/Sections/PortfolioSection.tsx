@@ -11,16 +11,17 @@ const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all')
 
 const words = [
-  { text: "Conheça", className: "text-6xl md:text-7xl" },
-  { text: "nosso", className: "text-6xl md:text-7xl" },
-  { text: "Portfólio", className: "text-6xl md:text-7xl text-orange-500 dark:text-orange-500" },
+  { text: "Conheça", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl" },
+  { text: "nosso", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl" },
+  { text: "Portfólio", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-orange-500 dark:text-orange-500" },
 ];
+
 
   const categories = [
     { id: 'all', name: 'Todos os Projetos' },
-    { id: 'kitchen', name: 'Cozinhas' },
-    { id: 'bedroom', name: 'Dormitórios' },
-    { id: 'office', name: 'Escritórios' }
+    { id: 'kitchen', name: 'Salas' },
+    { id: 'bedroom', name: 'Quartos' },
+    { id: 'office', name: 'Áreas comerciais' }
   ]
 
   const projects = [
@@ -89,11 +90,12 @@ const words = [
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
   <div className="text-center mb-16 animate-fade-in">
-<h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
-  <span className="inline-block text-5xl md:text-6xl font-bold text-primary">
+<h2 className="font-bold text-primary mb-6 text-center break-words leading-tight">
+  <span className="inline-block max-w-full">
     <TypewriterEffectSmooth words={words} />
   </span>
 </h2>
+
 
 
   <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

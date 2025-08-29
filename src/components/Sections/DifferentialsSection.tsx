@@ -38,7 +38,7 @@ const DifferentialsSection = () => {
     {
       icon: Award,
       title: 'Qualidade Garantida',
-      description: '15 anos de experiência e centenas de projetos entregues com excelência.',
+      description: 'Com anos de experiência e centenas de projetos entregues com excelência.',
       color: 'text-accent',
       gradient: 'from-yellow-400/20 via-amber-500/10 to-orange-400/20'
     },

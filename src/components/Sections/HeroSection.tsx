@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Users, Clock, Calculator } from "lucide-react";
+import { ArrowRight, Award, Users, Clock, Calculator, BadgeCheck } from "lucide-react";
 import heroImage from "@/assets/hero-kitchen.jpg";
 import { PointerHighlight } from "../ui/pointer-highlight";
 
@@ -133,13 +133,13 @@ const HeroSection = () => {
               </div>
               <div>
                 <div className="flex items-center w-12 h-12 bg-accent/20 rounded-full mb-3">
-                  <Clock className="w-6 h-6 text-accent mx-auto" />
+                  <BadgeCheck className="w-6 h-6 text-accent mx-auto" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary-foreground mb-1">
-                  100%
+                  9
                 </h3>
                 <p className="text-primary-foreground/80 text-sm">
-                  Prazo Cumprido
+                  Anos no mercado
                 </p>
               </div>
             </div>

@@ -24,13 +24,13 @@ const ProcessSection = () => {
     {
       icon: Hammer,
       title: 'Produção Sob Medida',
-      description: 'Fabricação artesanal com materiais premium e tecnologia de precisão.',
+      description: 'Fabricação personalizada com materiais premium, aliando o cuidado artesanal ao uso de softwares de última geração e corte de precisão em router CNC',
       step: '04'
     },
     {
       icon: Home,
       title: 'Entrega e Montagem',
-      description: 'Instalação cuidadosa por nossa equipe especializada no local.',
+      description: 'Instalação cuidadosa por equipe própria especializada.',
       step: '05'
     },
     {

@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
-import { MapPin, Phone, Mail, MessageSquare, Send } from 'lucide-react'
+import { MapPin, Phone, Mail, MessageSquare, Send, MessageCircle } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
 
 const ContactSection = () => {
@@ -41,29 +41,33 @@ const ContactSection = () => {
     setIsSubmitting(false)
   }
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/11994407006', '_blank')
+  }
+
   const contactInfo = [
     {
       icon: MapPin,
       title: 'Endereços',
       details: [
-        'Santa Catarina - Matriz',
-        'São Paulo - Filial'
+        'Av Santa Catarina 1487 - Centro',
+        ' São Carlos,SC - CEP 89885-000'
       ]
     },
     {
       icon: Phone,
       title: 'Telefones',
       details: [
-        '(47) 99999-9999',
-        '(11) 99999-9999'
+        '(49) 99118-1740 - Felipe',
+        '(49) 99187-2813 - inmobel'
       ]
     },
     {
       icon: Mail,
       title: 'E-mail',
       details: [
-        'contato@inmobel.com.br',
-        'orcamento@inmobel.com.br'
+        'inmobelmoveissc@gmail.com',
+       
       ]
     }
   ]
@@ -184,22 +188,16 @@ const ContactSection = () => {
                 </Card>
               ))}
 
-              {/* Expansion Info
-              <Card className="p-6 gradient-elegant border-l-4 border-accent">
-                <h3 className="text-lg font-bold text-primary mb-3">Expansão para São Paulo</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Com experiência consolidada em Santa Catarina, a Inmobel agora está presente 
-                  em São Paulo para atender um mercado ainda mais exigente, mantendo o mesmo 
-                  padrão de qualidade e compromisso que nos tornou referência.
-                </p>
-              </Card> */}
-
               {/* WhatsApp CTA */}
               <Card className="p-6 gradient-accent text-accent-foreground text-center shadow-accent">
                 <h3 className="text-xl font-bold mb-3">Atendimento Direto</h3>
                 <p className="mb-4">Prefere falar conosco diretamente?</p>
-                <Button variant="hero" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                  <MessageSquare className="w-5 h-5 mr-2" />
+                <Button 
+                  variant="hero" 
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                  onClick={openWhatsApp}
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
                   Chamar no WhatsApp
                 </Button>
               </Card>
