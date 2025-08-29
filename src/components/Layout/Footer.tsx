@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Inmobel Móveis Planejados</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Há 15 anos transformando ambientes através de móveis planejados únicos. 
+              Há 9 anos transformando ambientes através de móveis planejados únicos. 
               De Santa Catarina para São Paulo, levamos qualidade, design e confiança 
               para sua casa ou escritório.
             </p>
@@ -35,13 +35,13 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-1 text-accent flex-shrink-0" />
                 <span className="text-primary-foreground/80 text-sm">
-                  Rua das Flores, 123<br />
-                  Centro - Florianópolis, SC
+                  Av Santa Catarina 1483 - Centro<br />
+                  São Carlos,SC - CEP 89885-000
                 </span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-accent flex-shrink-0" />
-                <span className="text-primary-foreground/80 text-sm">(47) 99999-9999</span>
+                <span className="text-primary-foreground/80 text-sm">(49) 99187-2813</span>
               </div>
             </div>
           </div>

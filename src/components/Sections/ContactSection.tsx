@@ -42,7 +42,7 @@ const ContactSection = () => {
   }
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/11994407006', '_blank')
+    window.open('https://wa.me/49991181740', '_blank')
   }
 
   const contactInfo = [
