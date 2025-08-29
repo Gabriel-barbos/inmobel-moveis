@@ -34,7 +34,7 @@ const ContactSection = () => {
     
     toast({
       title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve. Obrigado pelo interesse!",
+      description: "Entraremos em contato em breve. Obrigado pelo interesse!  ",
     })
     
     setFormData({ name: '', email: '', phone: '', message: '' })
@@ -42,7 +42,7 @@ const ContactSection = () => {
   }
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/49991181740', '_blank')
+    window.open('https://wa.me/+5549991181740', '_blank')
   }
 
   const contactInfo = [

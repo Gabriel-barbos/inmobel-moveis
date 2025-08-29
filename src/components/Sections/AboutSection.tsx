@@ -184,11 +184,12 @@ const AboutSection = () => {
                     </div>
                   </div>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    A história da Inmobel Móveis Planejados tem suas raízes em 1973, quando nossa família iniciou suas atividades como uma marcenaria especializada em portas e janelas. Durante décadas, construímos um legado de dedicação, qualidade e compromisso com cada cliente.
-                    Em 2016, demos um passo decisivo: transformamos essa tradição em uma nova marca — Inmobel Móveis Planejados — focada em criar ambientes completos, sofisticados e personalizados. Desde então, unimos experiência, inovação e design para oferecer soluções exclusivas em móveis planejados.
-                    Mais do que mobiliário, entregamos projetos que refletem sonhos. Cada detalhe é pensado para atender às necessidades e ao estilo de vida de nossos clientes, garantindo funcionalidade, sofisticação e durabilidade.
-                   </p>
-                </div>
+                  A história da Inmobel Móveis Planejados tem suas raízes em 1973, quando nossa família iniciou suas atividades como uma marcenaria especializada em portas e janelas. Durante décadas, construímos um legado de dedicação, qualidade e compromisso com cada cliente.
+Em 2016, demos um passo decisivo: transformamos essa tradição em uma nova marca — Inmobel Móveis Planejados — focada em criar ambientes completos, sofisticados e personalizados. Desde então, unimos experiência, inovação e design para oferecer soluções exclusivas em móveis planejados.
+Mais do que mobiliário, entregamos projetos que refletem sonhos. Cada detalhe é pensado para atender às necessidades e ao estilo de vida de nossos clientes, garantindo funcionalidade, sofisticação e durabilidade.
+Para assegurar excelência em cada etapa, contamos com estrutura própria de mais de 750 m², equipada com softwares de última geração e maquinários profissionais, incluindo corte em router CNC, que minimizam a chance de erro humano e garantem precisão absoluta em nossas entregas.
+               </p> 
+               </div>
 
                 {/* Mission & Values Cards */}
                 <div className="grid md:grid-cols-2 gap-6">

@@ -11,7 +11,7 @@ const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all')
 
 const words = [
-  { text: "Conheça", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl" },
+  { text: "Veja", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl" },
   { text: "nosso", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl" },
   { text: "Portfólio", className: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-orange-500 dark:text-orange-500" },
 ];
