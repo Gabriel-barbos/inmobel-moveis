@@ -12,7 +12,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">Inmobel Móveis Planejados</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Há 9 anos transformando ambientes através de móveis planejados únicos. 
-              De Santa Catarina para São Paulo, levamos qualidade, design e confiança 
+              De Santa Catarina para o Brasil, levamos qualidade, design e confiança 
               para sua casa ou escritório.
             </p>
             <div className="flex space-x-4">

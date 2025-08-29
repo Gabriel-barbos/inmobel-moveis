@@ -1,35 +1,14 @@
+import React from "react";
 import { cn } from "@/lib/utils";
 import { ComponentPropsWithoutRef } from "react";
 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
-  /**
-   * Optional CSS class name to apply custom styles
-   */
   className?: string;
-  /**
-   * Whether to reverse the animation direction
-   * @default false
-   */
   reverse?: boolean;
-  /**
-   * Whether to pause the animation on hover
-   * @default false
-   */
   pauseOnHover?: boolean;
-  /**
-   * Content to be displayed in the marquee
-   */
   children: React.ReactNode;
-  /**
-   * Whether to animate vertically instead of horizontally
-   * @default false
-   */
   vertical?: boolean;
-  /**
-   * Number of times to repeat the content
-   * @default 4
-   */
-  repeat?: number;
+  repeat?: number; // vamos usar 2 por padrão
 }
 
 export function Marquee({
@@ -38,36 +17,46 @@ export function Marquee({
   pauseOnHover = false,
   children,
   vertical = false,
-  repeat = 4,
+  repeat = 2, // importante: 2 para a animação -50%
   ...props
 }: MarqueeProps) {
+  const items = React.Children.toArray(children);
+
   return (
     <div
       {...props}
       className={cn(
-        "group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
-        {
-          "flex-row": !vertical,
-          "flex-col": vertical,
-        },
-        className,
+        // container externo
+        "marquee w-full max-w-full overflow-hidden relative",
+        className
       )}
+      aria-hidden={false}
     >
-      {Array(repeat)
-        .fill(0)
-        .map((_, i) => (
-          <div
-            key={i}
-            className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-              "animate-marquee flex-row": !vertical,
-              "animate-marquee-vertical flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-direction:reverse]": reverse,
-            })}
-          >
-            {children}
+      {/* Track animado contendo N cópias idênticas */}
+      <div
+        className={cn(
+          "marquee__track flex items-center gap-[var(--gap,1rem)] min-w-[max-content] will-change-transform",
+          {
+            "marquee__track--vertical": vertical,
+            "marquee__track--reverse": reverse,
+            "marquee__track--pause": pauseOnHover,
+          }
+        )}
+        aria-hidden
+      >
+        {Array.from({ length: repeat }).map((_, rep) => (
+          <div key={rep} className="marquee__group inline-flex items-center gap-[var(--gap,1rem)]">
+            {items.map((child, i) => (
+              // cada item precisa ser no-shrink para manter largura desejada
+              <div key={i} className="marquee__item flex-shrink-0">
+                {child}
+              </div>
+            ))}
           </div>
         ))}
+      </div>
     </div>
   );
 }
+
+export default Marquee;

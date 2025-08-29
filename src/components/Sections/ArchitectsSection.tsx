@@ -197,13 +197,13 @@
             </div>
 
             {/* Testimonials Marquee Section */}
-            <div className="mb-16">
+            {/* <div className="mb-16">
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-primary mb-4">
-                  O que nossos parceiros arquitetos dizem
+                  O que nossos parceiros e clientes dizem
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Depoimentos reais de arquitetos que confiam na Inmobel para executar seus projetos
+                  Depoimentos reais de pessoas que confiam na Inmobel para realizar seus sonhos
                 </p>
               </div>
 
@@ -221,7 +221,7 @@
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
               </div>
-            </div> 
+            </div>  */}
 
             {/* Stats Section */}
             <div>
