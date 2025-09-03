@@ -26,7 +26,7 @@ const DifferentialsSection = () => {
       title: 'Estrutura de ponta e completa',
       description: 'Contamos com estrutura própria de mais de 750 m², equipada com softwares de última geração e maquinários profissionais',
       color: 'text-accent',
-      gradient: 'from-pink-400/20 via-rose-500/10 to-orange-400/20'
+      gradient: 'from-pink-400/20 via-rose-500/10 to-orange-400/20' 
     },
     {
       icon: Headphones,
