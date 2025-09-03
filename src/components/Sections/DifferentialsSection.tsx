@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card'
-import { CheckCircle, Clock, Palette, Headphones, Award, Users } from 'lucide-react'
+import { CheckCircle, Clock, Palette, Headphones, Award, Users, Building } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 const DifferentialsSection = () => {
@@ -22,9 +22,9 @@ const DifferentialsSection = () => {
       gradient: 'from-blue-400/20 via-indigo-500/10 to-purple-400/20'
     },
     {
-      icon: Palette,
-      title: 'Projetos 100% Personalizados',
-      description: 'Adaptação completa aos seus gostos e necessidades específicas.',
+      icon: Building,
+      title: 'Estrutura de ponta e completa',
+      description: 'Contamos com estrutura própria de mais de 750 m², equipada com softwares de última geração e maquinários profissionais',
       color: 'text-accent',
       gradient: 'from-pink-400/20 via-rose-500/10 to-orange-400/20'
     },
