@@ -30,7 +30,7 @@ const Header = () => {
           <div className="flex-shrink-0 flex items-center">
             <img 
               src={logo} 
-              alt="Inmobel" 
+              alt="InMobel" 
               className="h-10 w-auto object-contain" 
             />
           </div>

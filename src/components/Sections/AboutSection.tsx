@@ -158,14 +158,14 @@ const AboutSection = () => {
             {/* Section Header */}
             <div className="text-center mb-20 animate-fade-in">
               <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-                Conheça a Inmobel
+                Conheça a InMobel
               </div>
               <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">
                 Quem Somos
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Com tradição em Santa Catarina e agora expandindo para todo o brasil
-                , a Inmobel carrega 15 anos de experiência na criação de móveis planejados únicos.
+                , a InMobel carrega 15 anos de experiência na criação de móveis planejados únicos.
               </p>
             </div>
 
@@ -184,8 +184,8 @@ const AboutSection = () => {
                     </div>
                   </div>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                  A história da Inmobel Móveis Planejados tem suas raízes em 1973, quando nossa família iniciou suas atividades como uma marcenaria especializada em portas e janelas. Durante décadas, construímos um legado de dedicação, qualidade e compromisso com cada cliente.
-Em 2016, demos um passo decisivo: transformamos essa tradição em uma nova marca — Inmobel Móveis Planejados — focada em criar ambientes completos, sofisticados e personalizados. Desde então, unimos experiência, inovação e design para oferecer soluções exclusivas em móveis planejados.
+                  A história da InMobel Móveis Planejados tem suas raízes em 1973, quando nossa família iniciou suas atividades como uma marcenaria especializada em portas e janelas. Durante décadas, construímos um legado de dedicação, qualidade e compromisso com cada cliente.
+Em 2016, demos um passo decisivo: transformamos essa tradição em uma nova marca — InMobel Móveis Planejados — focada em criar ambientes completos, sofisticados e personalizados. Desde então, unimos experiência, inovação e design para oferecer soluções exclusivas em móveis planejados.
 Mais do que mobiliário, entregamos projetos que refletem sonhos. Cada detalhe é pensado para atender às necessidades e ao estilo de vida de nossos clientes, garantindo funcionalidade, sofisticação e durabilidade.
 Para assegurar excelência em cada etapa, 
                </p> 
@@ -214,7 +214,7 @@ Para assegurar excelência em cada etapa,
                       <h4 className="text-2xl font-bold text-primary ml-4">Valores</h4>
                     </div>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                   Na Inmobel, acreditamos que móveis planejados não são apenas parte de uma casa, são parte de vidas.
+                   Na InMobel, acreditamos que móveis planejados não são apenas parte de uma casa, são parte de vidas.
                     </p>
                   </Card>
                 </div>
@@ -242,7 +242,7 @@ Para assegurar excelência em cada etapa,
                   </div>
 
                   <h3 className="text-2xl font-bold mb-8 text-center opacity-0 animate-fadeInUp relative z-10">
-                    Por que escolher a Inmobel?
+                    Por que escolher a InMobel?
                   </h3>
 
                   <div className="space-y-8 relative z-10">

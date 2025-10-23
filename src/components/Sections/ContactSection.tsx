@@ -59,7 +59,7 @@ const ContactSection = () => {
       title: 'Telefones',
       details: [
         '(49) 99118-1740 - Felipe',
-        '(49) 99187-2813 - inmobel'
+        '(49) 99187-2813 - inMobel'
       ]
     },
     {

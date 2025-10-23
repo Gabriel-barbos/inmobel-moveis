@@ -33,7 +33,7 @@
       {
         name: "Cristian Ronald",
         username: "@cris_arquitetura",
-        body: "A Inmobel transformou meus projetos em realidade com uma precisão impressionante. A qualidade dos móveis planejados é excepcional.",
+        body: "A InMobel transformou meus projetos em realidade com uma precisão impressionante. A qualidade dos móveis planejados é excepcional.",
         img: "https://images.unsplash.com/photo-1494790108755-2616b612b739?w=150&h=150&fit=crop&crop=face",
       },
       {
@@ -51,7 +51,7 @@
       {
         name: "Roberto Almeida",
         username: "@roberto_projetos",
-        body: "Flexibilidade para alterações sem perder a qualidade. A Inmobel entende as necessidades dos arquitetos.",
+        body: "Flexibilidade para alterações sem perder a qualidade. A InMobel entende as necessidades dos arquitetos.",
         img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       },
       {
@@ -63,7 +63,7 @@
       {
         name: "Pedro Oliveira",
         username: "@pedro_design",
-        body: "Trabalho com a Inmobel há 5 anos. A confiança e qualidade são os pilares dessa parceria de sucesso.",
+        body: "Trabalho com a InMobel há 5 anos. A confiança e qualidade são os pilares dessa parceria de sucesso.",
         img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
       },
     ]
@@ -126,7 +126,7 @@
                 Parcerias com Arquitetos
               </h2>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Na Inmobel, entendemos a importância da parceria com arquitetos. 
+                Na InMobel, entendemos a importância da parceria com arquitetos. 
                 Oferecemos suporte total para a execução dos projetos, proporcionando 
                 flexibilidade e acompanhamento em todas as fases da obra.
               </p>
@@ -137,7 +137,7 @@
               <div className="animate-slide-up">
                 <Card className="p-8 gradient-elegant shadow-strong border-l-4 border-accent">
                   <h3 className="text-2xl font-bold text-primary mb-6">
-                    Por que os arquitetos escolhem a Inmobel?
+                    Por que os arquitetos escolhem a InMobel?
                   </h3>
                   
                   <div className="space-y-6 mb-8">

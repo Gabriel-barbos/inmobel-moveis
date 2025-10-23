@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Cozinha planejada luxuosa da Inmobel"
+          alt="Cozinha planejada luxuosa da InMobel"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
@@ -45,7 +45,7 @@ const HeroSection = () => {
             {/* Main Heading */}
             <div className="animate-slide-up">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-                <span className="block">Inmobel</span>
+                <span className="block">InMobel</span>
                 <span className="block text-accent">
                   Móveis{" "}
                   <PointerHighlight

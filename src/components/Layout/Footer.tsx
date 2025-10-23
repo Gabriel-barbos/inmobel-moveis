@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Inmobel Móveis Planejados</h3>
+            <h3 className="text-2xl font-bold mb-4">InMobel Móveis Planejados</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Há 9 anos transformando ambientes através de móveis planejados únicos. 
               De Santa Catarina para o Brasil, levamos qualidade, design e confiança 
